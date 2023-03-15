@@ -43,7 +43,7 @@ const Home: NextPage = () => {
             <Heading size="2xl">Juyeol Cha</Heading>
             <Text fontSize="2xl">Software Engineer</Text>
             <Text className="break-all">
-              I'm a software engineer specialised in frontend development for
+              I am a software engineer specialised in frontend development for
               web apps. I write about software development and my daily life on
               my blog. Want to know how I may help your project? please contact
               me.
