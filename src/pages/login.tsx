@@ -10,9 +10,21 @@ const Login: NextPage = () => {
     <Center className="h-screen flex-col gap-12">
       <Heading>Login page for admin</Heading>
       {session ? (
-        <Button onClick={async () => await signOut()}>SIGNOUT</Button>
+        <Button
+          onClick={() => {
+            void (async () => signOut())();
+          }}
+        >
+          SIGNOUT
+        </Button>
       ) : (
-        <Button onClick={async () => await signIn()}>SIGNIN</Button>
+        <Button
+          onClick={() => {
+            void (async () => signIn())();
+          }}
+        >
+          SIGNIN
+        </Button>
       )}
     </Center>
   );
