@@ -1,7 +1,7 @@
 import {
+  Box,
   Card,
   CardBody,
-  CardHeader,
   Divider,
   Flex,
   Heading,
@@ -54,17 +54,17 @@ const Home: NextPage = () => {
             <Image src="/profile.jpeg" alt="profile" width={320} height={180} />
           </Stack>
         </Flex>
-        <Divider mt={10} />
-        <Stack className="p-10" spacing={6}>
-          <Heading className="border-l-4 border-teal-400 pl-6">
+        <Box className="p-10">
+          <Divider mt={10} />
+          <Heading className="mt-20 border-l-4 border-teal-400 pl-6">
             What I do
           </Heading>
-          <Text className="break-all">
+          <Text className="mt-6 break-all">
             I have a lot of up-to-date skills for creating web or app, mainly
             focused on front-end but also including back-end as one of my areas
             of expertise
           </Text>
-          <Flex className="mt-28 flex-wrap gap-6">
+          <Flex className="mt-10 flex-wrap gap-6">
             <Card className="w-96" variant="outline">
               <CardBody>
                 <HStack>
@@ -140,9 +140,10 @@ const Home: NextPage = () => {
                 </HStack>
                 <Text className="mt-2 mb-2 font-bold">TRPC / GraphQL</Text>
                 <Text>
-                  React is the UI library that I always use when developing web
-                  front-ends. When React is used in conjunction with TypeScript,
-                  it is possible to create a very powerful web application
+                  While many projects use basic REST API, there are times when
+                  using other methods is better. I can use TRPC and GraphQL, and
+                  among them, I love TRPC because of its fantastic compatibility
+                  with Next.js
                 </Text>
               </CardBody>
             </Card>
@@ -159,7 +160,11 @@ const Home: NextPage = () => {
               </CardBody>
             </Card>
           </Flex>
-        </Stack>
+          <Divider className="mt-20" />
+          <Heading className="mt-20 border-l-4 border-teal-400 pl-6 ">
+            Latest Blog Posts
+          </Heading>
+        </Box>
       </Layout>
     </>
   );
