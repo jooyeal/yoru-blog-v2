@@ -2,7 +2,12 @@
 const config = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        mobile: { max: "1024px" }, // Mobile screens
+        laptop: { min: "1024px" }, // Laptop screens
+      },
+    },
   },
   plugins: [],
 };
