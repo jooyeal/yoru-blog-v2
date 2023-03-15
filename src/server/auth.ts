@@ -6,8 +6,6 @@ import {
 } from "next-auth";
 // import DiscordProvider from "next-auth/providers/discord";
 import CredentialProvider from "next-auth/providers/credentials";
-import { PrismaAdapter } from "@next-auth/prisma-adapter";
-import { env } from "~/env.mjs";
 import { prisma } from "~/server/db";
 
 /**
@@ -38,7 +36,7 @@ declare module "next-auth" {
  */
 export const authOptions: NextAuthOptions = {
   callbacks: {
-    async session({ session, user }) {
+    session({ session, user }) {
       // if (session.user) {
       //   session.user.id = user.id;
       //   // session.user.role = user.role; <-- put other properties on the session here
