@@ -4,7 +4,7 @@ import { getSession, signIn, signOut, useSession } from "next-auth/react";
 import React from "react";
 import Button from "~/components/molecules/Button";
 
-const login: NextPage = () => {
+const Login: NextPage = () => {
   const { data: session } = useSession();
   return (
     <Center className="h-screen flex-col gap-12">
@@ -18,4 +18,4 @@ const login: NextPage = () => {
   );
 };
 
-export default login;
+export default Login;
